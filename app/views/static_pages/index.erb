@@ -1,0 +1,16 @@
+<%= form_with url: root_path, method: :get do |form| %>
+  <p>
+    <%=form.label "Collections ID"%>
+    <%=form.text_field :collections_id%>
+  </p>
+  
+  <% if @collections.present? %>
+    <% @collections.each do |url| %>
+      <p>
+        <%= image_tag url %>
+      </p>
+    <% end %>
+<% end %>
+  <%=form.submit "Submit"%>
+
+<% end %>
