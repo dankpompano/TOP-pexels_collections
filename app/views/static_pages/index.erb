@@ -4,13 +4,10 @@
     <%=form.text_field :collections_id%>
   </p>
   
-  <% if @collections.present? %>
-    <% @collections.each do |url| %>
-      <p>
-        <%= image_tag url %>
-      </p>
+  <% if @collection.present? %>
+    <% @collection["media"].each do |image| %>
+      <img src="<%= image["src"]["medium"] %>" alt="<%= image["alt"] %>">
     <% end %>
-<% end %>
+  <% end %>
   <%=form.submit "Submit"%>
-
 <% end %>

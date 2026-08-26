@@ -67,3 +67,4 @@ end
 
 gem "faraday"
 gem "figaro"
+gem "httparty"
